@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-  number = rand(101)
+  SECRET_NUMBER = rand(101)
 
   def guess_check(guess, number)
     difference = (guess - number)
@@ -21,6 +21,7 @@ require 'sinatra/reloader'
 
 get '/' do
   guess = params["guess"].to_i
+  number = SECRET_NUMBER
   message = guess_check(guess, number)
     erb :index, :locals => {:number => number,
                             :message => message }
