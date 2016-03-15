@@ -10,19 +10,19 @@ set :color_output, "#FFFFFF"
     difference = (guess - settings.number)
     if difference >= 5
       message_assignment("Way too high!")
-      color_selector("#FF0000")
+      color_selector("#FF0000") #red
     elsif difference < 5 && difference > 0
       message_assignment "Too high!"
-      color_selector("#FF00FF")
+      color_selector("FFCCCC") #light pink
     elsif difference <= -5
       message_assignment "Way too low!"
-      color_selector("#FF0000")
+      color_selector("#FF0000") #red 
     elsif difference < 0 && difference > -5
       message_assignment "Too low!"
-      color_selector("#FF00FF")
+      color_selector("FFCCCC") #light pink
     else
       message_assignment "You got it right!"
-      color_selector("#00FF00")
+      color_selector("#009900") #green
     end
   end
 
